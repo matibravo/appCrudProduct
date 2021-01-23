@@ -1,0 +1,153 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body { 
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.5em;
+    font-weight: bolder;    
+}
+
+form label {
+    padding: 1rem;        
+}
+
+form input {
+    padding: 1rem;    
+}
+
+.header {
+    padding: 1em;
+    text-align: center;    
+    background-color: yellow;
+    color: black;
+    margin-bottom: 2em;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.container-left {
+    grid-column: 1 / 4;    
+}
+
+.container-right {
+    height: 70vh;
+    grid-column: 5 / 12;   
+    overflow-y: scroll; 
+}
+
+.formulario {
+    margin-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.btn_guardar {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    background-color: blue;
+    color: white;
+    border-radius: 4px;
+    padding: 1rem;
+    cursor: pointer;    
+}
+
+.btn_guardar:hover {
+    background-color: rgba(0, 0, 250, 0.5);
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.elemento {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;   
+    padding: 1rem;
+    cursor: pointer;    
+}
+
+.elemento:hover {
+    background-color: #E7DFDE;
+}
+
+.btn_modificar {
+    background-color: green;
+    color: white;
+    border-radius: 4px;
+    padding: 1rem;
+    cursor: pointer;    
+    
+}
+
+.btn_modificar:hover {
+    background-color: rgba(0, 250, 0, 0.5);
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.btn_eliminar {
+    background-color: red;
+    color: white;
+    border-radius: 4px;
+    padding: 1rem;
+    cursor: pointer;    
+    
+}
+
+.btn_eliminar:hover {
+    background-color: rgba(250, 0, 0, 0.5);
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+
+.footer {
+    height: 15vh;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin-top: 4rem;
+    padding: 2rem;
+    margin-bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+}
+
+.footer a{
+    text-decoration: none;
+    color: white;
+}
+
+/*MEDIA QUERYS CELULAR*/
+
+@media (max-width: 450px) {
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .container-left {
+        grid-column: 2 / 6;
+    }
+
+    .container-right {
+
+        grid-column: 1 / 7;
+    }
+
+    #resultado {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #resultado span {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+
+}
